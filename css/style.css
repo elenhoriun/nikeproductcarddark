@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'museo_sans100';
+    src: url('../fonts/museo-sans-100-webfont.woff') format('woff'),
+         url('../fonts/museo-sans-100-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background: url(../img/background-main.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+
+
+/* Layout */
+/*.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}*/
+
+.ba-wrap {
+	max-width: 687px;
+	min-height: 300px;
+	margin: 110px auto 100px;
+	background: #111a28; 
+	box-shadow: 0 0 65px rgba(0,0,0,0.8);
+	border-radius: 10px;
+	}
+
+/*Header*/
+.ba-header {
+	width: 100%;
+	padding: 24px 0 15px 20px;
+}
+
+/*Card*/
+.ba-card-photos {
+	width: 60%;
+	float: left;
+}
+
+.ba-card-photos__image {
+	margin: 50px 35px 50px 35px;
+}
+
+.ba-card-photos__color {
+	text-align: center;
+	margin: 20px auto;
+}
+
+.ba-color-list__item {
+	display: inline-block;
+	margin-left: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+
+.ba-color-list__item--black {
+	background: #1f273f;
+}
+
+.ba-color-list__item--white {
+	background: #fff;
+}
+
+.ba-color-list__item--red {
+	background: #ed3333;
+}
+
+.ba-color-list__item--blue {
+	background: #29e3ea;
+}
+
+.ba-color-list__item--active {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #7e838b;
+	margin-right: -4px;
+}
+
+.ba-card-info {
+	width: 40%;
+	float: left;
+	padding: 0 50px 0 35px;
+	font-family: "museo_sans100";
+	font-size: 14px;
+	color: #e1e1e1;
+	font-weight: normal;
+}
+
+.ba-card-info__name {
+	font-size: 24px;
+	margin: 0;
+}
+
+.ba-card-photos__description {
+	letter-spacing: 0.02em;
+	white-space: nowrap;
+	overflow: hidden;
+	margin: 12px 0 20px 0;
+}
+
+/*Rating*/
+.ba-rating {
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	font-size: 16px;
+}
+
+.ba-rating:before {
+	content: '★★★★★';
+	color: #9da1a6;
+}
+
+.ba-rating__highlight {
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.ba-rating__highlight:before {
+	content: '★★★★★';
+	color: #f7bf16;
+	font-size: 16px;
+}
+
+/*Button*/
+.ba-button {
+	min-width: 185px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	margin: 25px 0 30px 2px;
+	color: #e1e1e1;
+	background-color: #202835;
+	border: 1px solid #4f5560;
+}
+
+.ba-button:hover {
+	opacity: 0.8;
+}
+
+/*Forms*/
+.ba-card-info__forms {
+	margin-top: 20px;
+}
+
+.ba-card-info__form {
+	float: left;
+	margin-left: 3px;
+	}
+
+
+.ba-card-info__form select {
+	width: 82px;
+	height: 30px;
+	padding: 0 10px;
+	background: transparent;
+	font-family: "museo_sans100";
+	font-size: 14px;
+	color: #e1e1e1;
+	font-weight: 100;
+	border: none;
+	}
+
+.ba-card-info__form {
+   width: 70px;
+   height: 30px;
+   overflow: hidden;
+   border: 1px solid #4f5560;
+   background: url(../img/select.png) no-repeat 85% #111a28;
+   }
+
+
+
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+
+	-webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	-moz-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
