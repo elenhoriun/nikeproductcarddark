@@ -32,7 +32,7 @@ body {
 
 /*Header*/
 .ba-header {
-	width: 100%;
+	width: 100px;
 	padding: 24px 0 15px 20px;
 }
 
@@ -42,13 +42,30 @@ body {
 	float: left;
 }
 
+.ba-card-photos__top {
+	height: 250px;			/*для выравнивания картинки по центру блока*/
+	position: relative;
+	overflow: hidden;
+}
+
 .ba-card-photos__image {
-	margin: 50px 35px 50px 35px;
+	display: block;		/*для выравнивания картинки по центру блока*/
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+	/*margin: 50px 35px 50px 35px;*/
 }
 
 .ba-card-photos__color {
 	text-align: center;
 	margin: 20px auto;
+}
+
+.ba-color-list {
+	padding-left: 0;
 }
 
 .ba-color-list__item {
@@ -58,6 +75,7 @@ body {
 	height: 10px;
 	border-radius: 50%;
 	vertical-align: middle;
+	cursor: pointer;
 }
 
 .ba-color-list__item--black {
@@ -68,11 +86,35 @@ body {
 	background: #fff;
 }
 
+.ba-color-list__item--white:hover {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #7e838b;
+	margin-right: -4px;
+	background: #fff;
+}
+
 .ba-color-list__item--red {
 	background: #ed3333;
 }
 
+.ba-color-list__item--red:hover {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #7e838b;
+	margin-right: -4px;
+	background: #ed3333;
+}
+
 .ba-color-list__item--blue {
+	background: #29e3ea;
+}
+
+.ba-color-list__item--blue:hover {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #7e838b;
+	margin-right: -4px;
 	background: #29e3ea;
 }
 
@@ -96,6 +138,7 @@ body {
 .ba-card-info__name {
 	font-size: 24px;
 	margin: 0;
+	font-weight: 400;
 }
 
 .ba-card-photos__description {
@@ -103,6 +146,7 @@ body {
 	white-space: nowrap;
 	overflow: hidden;
 	margin: 12px 0 20px 0;
+	color: rgba(225,225,225,0.54);
 }
 
 /*Rating*/
@@ -139,9 +183,10 @@ body {
 	text-align: center;
 	text-decoration: none;
 	margin: 25px 0 30px 2px;
-	color: #e1e1e1;
+	color: rgba(225,225,225,0.54);
 	background-color: #202835;
 	border: 1px solid #4f5560;
+	cursor: pointer;
 }
 
 .ba-button:hover {
@@ -153,33 +198,54 @@ body {
 	margin-top: 20px;
 }
 
-.ba-card-info__form {
-	float: left;
-	margin-left: 3px;
-	}
+/*Стилизация select
+1-й вариант (ширина option будет больше select, не очень красиво*/
 
-
-.ba-card-info__select {
-	width: 82px;
+/*.ba-card-info__select {
+	width: 90px;
 	height: 30px;
 	padding: 0 10px;
 	background: transparent;
 	font-family: "museo_sans100";
 	font-size: 14px;
-	color: #e1e1e1;
+	color: rgba(225,225,225,0.54);
 	font-weight: 100;
 	border: none;
 	}
 
 .ba-card-info__form {
+	float: left;
+	margin-left: 3px;
    width: 70px;
    height: 30px;
    overflow: hidden;
    border: 1px solid #4f5560;
    background: url(../img/select.png) no-repeat 85% #111a28;
-   }
+   }*/
 
+/*2-й вариант (не работает в IE)*/
 
+.ba-card-info__form {
+	float: left;
+	margin-left: 3px;
+	border: 1px solid #4f5560;
+}
+
+.ba-card-info__select {
+	width: 70px;
+	height: 30px;
+	padding: 0 10px;
+	background: transparent;
+	font-family: "museo_sans100";
+	font-size: 14px;
+	color: rgba(225,225,225,0.54);
+	font-weight: 100;
+	border: none;
+	-webkit-appearance: none; 
+   	-moz-appearance: none;
+  	appearance: none;       /* remove default arrow */
+   	background: url(../img/select.png) no-repeat 85% #111a28;   /* add custom arrow */
+}
 
 
 /* Typography */
